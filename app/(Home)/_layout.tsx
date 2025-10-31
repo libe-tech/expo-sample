@@ -8,6 +8,10 @@ export default function HomeLayout() {
         name="index"
         options={{ title: "ホーム", headerShown: false }}
       />
+      <Stack.Screen
+        name="blogs"
+        options={{ title: "ブログ", headerShown: false }}
+      />
     </Stack>
   );
 }

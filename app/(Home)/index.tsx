@@ -1,9 +1,11 @@
 import React from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 
 export default function Home() {
   const [email, setEmail] = React.useState("");
+  const router = useRouter();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -21,7 +23,7 @@ export default function Home() {
         style={styles.email}
         autoCapitalize="none"
       />
-      <Button title="送信" onPress={() => console.log(email)} />
+      <Button title="送信" onPress={() => router.push("/(Home)/blogs")} />
     </SafeAreaView>
   );
 }
